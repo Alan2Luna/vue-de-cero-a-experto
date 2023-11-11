@@ -1,6 +1,7 @@
 <template>
-    <h2>{{ customTitle }} {{  start }}</h2>
+    <h2 >{{ customTitle }}</h2>
     <p>{{ counter }}<sub>2</sub> = {{ squareCounter }}</p>
+    <p data-testid="counter">{{ counter }}</p>
     <div>
         <button v-on:click="increase">+1</button>
         <button v-on:click="decrease">-1</button>
@@ -12,7 +13,7 @@
             title: String,
             start: {
                 type: Number,
-                default: 1,
+                default: 100,
                 // required: true,
                 validator(value) {
                     return value < 10;

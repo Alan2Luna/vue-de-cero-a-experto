@@ -1,14 +1,16 @@
 <template>
-  <Indecision />
+  <Navbar />
+  <img alt="Vue logo" src="./assets/logo.png">
+  <router-view />
 </template>
 
 <script>
-import Indecision from './components/Indecision.vue'
+import { defineAsyncComponent } from 'vue';
 
 export default {
   name: 'App',
   components: {
-    Indecision
+    Navbar: defineAsyncComponent(() => import('@/modules/shared/components/Navbar'))
   }
 }
 </script>

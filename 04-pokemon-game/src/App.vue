@@ -1,14 +1,14 @@
 <template>
-  <Indecision />
+  <PokemonPage />
 </template>
 
 <script>
-import Indecision from './components/Indecision.vue'
+import PokemonPage from './pages/PokemonPage'
 
 export default {
   name: 'App',
   components: {
-    Indecision
+    PokemonPage
   }
 }
 </script>
